@@ -1,62 +1,44 @@
-# 🤖 AI-Powered Document Q&A Assistant
+## ai document q&a assistant
 
-## 🌟 Overview
-An advanced AI assistant that transforms how you interact with documents. Leveraging cutting-edge AI technologies, this tool enables real-time, context-aware question answering by processing audio input and intelligently extracting insights from your documents.
+an ai assistant to live transcribe the converversation and use internet search, and document search (rag) to provide context to the transcript and answer questions if any.
 
-## ✨ Features
-- 🎙️ Real-time audio transcription with high accuracy
-- 📄 Intelligent document context extraction
-- 🌐 Seamless web search integration
-- 🧠 Adaptive context sourcing (document, web, or AI knowledge)
-- 🚀 Efficient multi-threaded processing
+### features
+- real-time speech-to-text with faster whisper.
+- voice query extraction.
+- context retrieval from pdf/txt files.
+- web search fallback when needed.
+- multi-threaded audio and query processing.
 
-## 🛠️ Installation
+### prerequisites
+- python 3.8+
+- api keys for openai and tavily
 
-### Prerequisites
-- 🐍 Python 3.8+
-- 🔑 API Keys:
-  - OpenAI API Key
-  - Tavily API Key
-
-### Quick Setup
-1. Clone the repository:
+### setup
+1. clone the repository and change to its directory:
 ```bash
 git clone https://github.com/yourusername/ai-document-assistant.git
 cd ai-document-assistant
-```
+````
 
-2. Install dependencies:
+2. install dependencies:
+
 ```bash
-pip install openai tavily-python faster-whisper pyaudio numpy python-dotenv PyPDF2 sounddevice tiktoken
+pip install openai tavily-python faster-whisper pyaudio numpy python-dotenv pypdf2 sounddevice tiktoken
 ```
 
-3. Create a `.env` file:
+3. create a `.env` file with your credentials:
+
 ```
-OPENAI_API_KEY=your_openai_api_key
-TAVILY_API_KEY=your_tavily_api_key
+openai_api_key=your_openai_api_key
+tavily_api_key=your_tavily_api_key
 ```
 
-## 🚀 Getting Started
-1. Run the application
+### running the assistant
+
+1. launch the app:
 ```bash
 python main.py
 ```
-2. When prompted, enter the full path to your PDF or TXT document
-3. Select your audio input device
-4. Start asking questions about the document!
-
-## 🔧 Detailed Dependencies
-- **🤖 OpenAI**: Powering intelligent text generation and embeddings
-- **🌐 Tavily**: Providing real-time web search capabilities
-- **🎙️ Faster Whisper**: Enabling rapid, accurate speech-to-text transcription
-- **🔊 PyAudio**: Managing audio input streams
-- **🧮 NumPy**: Supporting high-performance numerical computations
-
-## 🤝 Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-MIT License
-
-## 🛡️ Disclaimer
-This tool is an AI-powered assistant and may occasionally provide imperfect responses. Always verify critical information.
+2. provide the full path to your pdf or txt document.
+3. pick an audio input device.
+4. speak your query and receive concise answers
